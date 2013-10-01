@@ -1,9 +1,12 @@
 adb shell stop b2g
 adb remount /system
-adb push profile/webapps/keyboard.gaiamobile.org/application.zip /data/local/webapps/keyboard.gaiamobile.org/application.zip
-adb push profile/webapps/keyboard.gaiamobile.org/manifest.webapp /data/local/webapps/keyboard.gaiamobile.org/manifest.webapp
-adb push profile/webapps/settings.gaiamobile.org/application.zip /data/local/webapps/settings.gaiamobile.org/application.zip
-adb push profile/webapps/settings.gaiamobile.org/manifest.webapp /data/local/webapps/settings.gaiamobile.org/manifest.webapp
+mkdir -p backup
+adb pull /system/b2g/webapps/keyboard.gaiamobile.org backup/
+adb pull /system/b2g/webapps/settings.gaiamobile.org backup/
+adb push profile/webapps/keyboard.gaiamobile.org/application.zip /system/b2g/webapps/keyboard.gaiamobile.org/application.zip
+adb push profile/webapps/keyboard.gaiamobile.org/manifest.webapp /system/b2g/webapps/keyboard.gaiamobile.org/manifest.webapp
+adb push profile/webapps/settings.gaiamobile.org/application.zip /system/b2g/webapps/settings.gaiamobile.org/application.zip
+adb push profile/webapps/settings.gaiamobile.org/manifest.webapp /system/b2g/webapps/settings.gaiamobile.org/manifest.webapp
 adb push Padauk-bold.ttf /system/fonts/Padauk-bold.ttf
 adb push Padauk.ttf /system/fonts/Padauk.ttf
 adb shell start b2g
