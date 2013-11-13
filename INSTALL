@@ -8,6 +8,6 @@ adb push profile/webapps/keyboard.gaiamobile.org/application.zip /system/b2g/web
 adb push profile/webapps/keyboard.gaiamobile.org/manifest.webapp /system/b2g/webapps/keyboard.gaiamobile.org/manifest.webapp
 adb push profile/webapps/settings.gaiamobile.org/application.zip /system/b2g/webapps/settings.gaiamobile.org/application.zip
 adb push profile/webapps/settings.gaiamobile.org/manifest.webapp /system/b2g/webapps/settings.gaiamobile.org/manifest.webapp
-adb push Padauk-bold.ttf /system/fonts/Padauk-bold.ttf
-adb push Padauk.ttf /system/fonts/Padauk.ttf
+adb push font/Padauk-bold.ttf /system/fonts/Padauk-bold.ttf
+adb push font/Padauk.ttf /system/fonts/Padauk.ttf
 adb shell start b2g
