@@ -1,8 +1,9 @@
-adb shell stop b2g
+dir=backup`date +%Y%m%k%M`
+mkdir -p $dir
 adb remount /system
-mkdir -p backup
-adb pull /system/b2g/webapps/keyboard.gaiamobile.org backup/
-adb pull /system/b2g/webapps/settings.gaiamobile.org backup/
+adb shell stop b2g
+adb pull /system/b2g/webapps/keyboard.gaiamobile.org $dir/
+adb pull /system/b2g/webapps/settings.gaiamobile.org $dir/
 adb push profile/webapps/keyboard.gaiamobile.org/application.zip /system/b2g/webapps/keyboard.gaiamobile.org/application.zip
 adb push profile/webapps/keyboard.gaiamobile.org/manifest.webapp /system/b2g/webapps/keyboard.gaiamobile.org/manifest.webapp
 adb push profile/webapps/settings.gaiamobile.org/application.zip /system/b2g/webapps/settings.gaiamobile.org/application.zip
